@@ -1,0 +1,47 @@
+﻿@model IEnumerable<PieShopProject.Models.Models.Pie>
+@{
+    ViewData["Title"] = "Menu";
+}
+
+
+
+
+<div class="row">
+    @foreach (var c in Model)
+    { 
+
+        <div class="col-sm-3 p-3  ">
+            <img src="~@c.Image" alt="SorryDataBase"
+             height="120" width="120"
+             asp-append-version="true" />
+            <br />
+            <h4 style="color:purple;"> @c.Name</h4>
+
+            <p style="color:crimson">
+                @c.Description
+            </p>
+            <p style="color:hotpink;">
+                Price :₹  @c.Price
+            </p>
+
+
+
+
+            <div class="btn-group m-75" role="group">
+                <a class="btn btn-info pl-2" asp-controller="Pie" asp-action="PieDetails" asp-route-id="@c.Id" class="btn btn-info">Details</a>
+
+
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+    }
+   

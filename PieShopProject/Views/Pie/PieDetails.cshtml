@@ -1,0 +1,23 @@
+﻿@model PieShopProject.Models.Models.Pie
+@{
+    ViewData["Title"] = "PieDetails";
+}
+
+<h1 >Details</h1>
+
+<div class="text-center">
+    
+    
+    <h1><img src="@Model.Image" width="30%"</img></h1>
+    <h3 style="color:lightcoral;">@Model.Name</h3>
+    <p style="color:purple;">@Model.Description</p>
+    <p style="color:purple;">₹@Model.Price</p>
+</div>
+
+
+
+
+<div>
+    <a asp-controller="Pie" asp-action="Index" class="btn btn-outline-info">Back</a>
+</div>
+
